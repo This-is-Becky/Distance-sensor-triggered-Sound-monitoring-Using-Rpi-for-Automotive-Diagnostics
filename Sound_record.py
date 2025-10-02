@@ -29,7 +29,7 @@ def get_sound_path():
 def create_folder_and_filename(plate):
     path = get_sound_path()
     os.makedirs(path, exist_ok=True)
-    filename = os.path.join(path, f"{plate}{datetime.today().strftime('%Y%m%d_%H%M%S%f')}.wav")
+    filename = os.path.join(path, f"{plate}_{datetime.today().strftime('%Y%m%d_%H%M%S')}.wav")
     return filename
 
 def delete_old_folders(base_path, days_old=10):

@@ -4,6 +4,14 @@ Smart audio recording system that uses a distance sensor to detect nearby object
 ## for Distance.ino file
 Connect VL53L0X sensor to ESP32 and upload the script on ESP32 
 
+## For read_esp32.py file
+This code is simple coding to test whether the ESP32 and the distance sensor can successfully connect to rpi and the data can be read by Rpi, easy for debugging and validate before running the Main code
+
+Connect the Rpi and ESP32 via the connection of USB port, use `ls /dev/ttyUSB**` to check which USB port that has been connect to the ESP32, then adjust the following serial port if needed.
+```
+ser = serial.Serial(port='/dev/ttyUSB1', baudrate=115200, timeout=1)
+```
+
 ## For Sh file
 need to confirm the format of the file is UNIX, if not sure, type:
 `dos2unix Main.sh` to convert the format from DOS to UNIX

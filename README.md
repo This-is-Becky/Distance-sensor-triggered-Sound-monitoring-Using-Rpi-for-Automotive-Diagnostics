@@ -3,3 +3,7 @@ Smart audio recording system that uses a distance sensor to detect nearby object
 
 ## for Distance.ino file
 Connect VL53L0X sensor to ESP32 and upload the script on ESP32 
+
+## For Sh file
+need to confirm the format of the file is UNIX, if not sure, type:
+`dos2unix Main.sh` to convert the format from DOS to UNIX

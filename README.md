@@ -12,8 +12,27 @@ Connect the Rpi and ESP32 via the connection of USB port, use `ls /dev/ttyUSB**`
 ser = serial.Serial(port='/dev/ttyUSB1', baudrate=115200, timeout=1)
 ```
 
+## For Sound_record.py
+- Function: Automatically records audio when an object is detected within a certain distance using a serial-connected sensor.
+
+- Distance Trigger: Starts recording when the measured distance is less than or equal then the thersold value and remains stable for 3 seconds.
+
+- Recording Setup: Uses arecord to capture audio for up to 120 seconds or until the object moves out of range.
+
+- File Management: Saves recordings in a date-based folder under `./Sound.`folder, 
+Filenames include the user-input plate number and timestamp.
+
+**NOTE**
+  Need Manually create a folder and named it as `"Sound"`
+  
+- Automatically deletes folders older than 10 days.
+
+- Multithreading:
+RecorderThread: Handles distance monitoring and audio recording.
+CleanupThread: Periodically deletes old folders.
+
 ## For Sh file
-need to confirm the format of the file is UNIX, if not sure, type:
+need to confirm the format of the file is **UNIX**, if not sure, type:
 `dos2unix Main.sh` to convert the format from DOS to UNIX
 
 Edit the Serial port `ttyUSB*` according to the result of the USB serial device, which will shown after running the Main.sh file

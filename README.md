@@ -23,7 +23,7 @@ ser = serial.Serial(port='/dev/ttyUSB1', baudrate=115200, timeout=1)
 Filenames include the user-input plate number and timestamp.
 
 **NOTE**
-  Need Manually create a folder and named it as `"Sound"`
+  Need Manually create a folder and named it as `"Sound"` in the same location of the script.
   
 - Automatically deletes folders older than 10 days.
 

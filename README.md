@@ -45,6 +45,17 @@ Also the `plughw:2,0` according to the audio recording device, which will shown 
 process = subprocess.Popen(['arecord', '-D', 'plughw:2,0', '--format=FLOAT_LE', '--rate=44100', '-c2', filename])
 ```
 
+## Step by step
+
+ 1. Stored the desire python script in the specific path location
+
+ 2. Add permission on rpi
+`chmod +x Main.sh`
+
+ 3. Run the script on rpi
+`./Main.sh`
+
+
 ## User Interface and listing USB and recording devices:
 <img width="647" height="165" alt="image" src="https://github.com/user-attachments/assets/93ce1653-71ed-4edc-b0b3-2e3fc128a486" />
 

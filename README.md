@@ -44,4 +44,9 @@ Also the `plughw:2,0` according to the audio recording device, which will shown 
 ```
 process = subprocess.Popen(['arecord', '-D', 'plughw:2,0', '--format=FLOAT_LE', '--rate=44100', '-c2', filename])
 ```
+
+## User Interface and listing USB and recording devices:
 <img width="647" height="165" alt="image" src="https://github.com/user-attachments/assets/93ce1653-71ed-4edc-b0b3-2e3fc128a486" />
+
+## Result
+<img width="199" height="30" alt="image" src="https://github.com/user-attachments/assets/0d77a855-3018-4cb9-a58f-158063f4c4c8" />
